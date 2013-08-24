@@ -1,0 +1,52 @@
+package com.fiona.test;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+//import java.io.Console;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.regex.Pattern;
+
+public class Mission1_StandardInput {
+
+	public static void main(String[] args) throws IOException {
+
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		writer.write("Command:");
+		writer.flush();
+		
+		String keyin = reader.readLine();
+		
+		while (!keyin.equals("exit")) 
+		{	
+			if(keyin.equals("config")){
+				new ResponseLine().configResponseLine(writer,reader);
+			}
+			else if(!Pattern.compile("[0-9]*").matcher(keyin).matches()){
+				System.out.println("Please keyin correct command,keyin \"HELP\" for introduction.");
+				writer.write("Command:");
+				writer.flush();
+				
+				keyin = reader.readLine();
+			}
+			else if(Integer.parseInt(keyin) < ResponseLine.response.size()){
+				System.out.println(ResponseLine.responseGet(Integer.parseInt(keyin)));
+			}
+
+			if(keyin.equals("HELP")){
+				new ResponseLine().helpReponseLine();
+			}
+			writer.write("Command:");
+			writer.flush();
+			
+			keyin = reader.readLine();
+		}
+		
+
+	}
+	
+
+}

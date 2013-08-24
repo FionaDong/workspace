@@ -1,0 +1,15 @@
+package com.fiona.test;
+
+import java.io.IOException;
+
+public class TerminalLauncher {
+
+	public static void main(String[] args) throws IOException {
+//		String commander = "/usr/bin/xterm";
+		String commander = System.getenv().get("TERM"); 	
+		Runtime runtime = Runtime.getRuntime();
+		Process process = runtime.exec(commander);
+		
+		System.out.println(process);
+	}
+}

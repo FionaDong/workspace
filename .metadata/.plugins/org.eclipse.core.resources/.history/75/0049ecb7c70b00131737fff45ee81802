@@ -1,0 +1,15 @@
+package com.fiona.test;
+
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
+
+
+public class BufferedWriter {
+
+	public static void main(String[] args) {
+		
+		BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		
+	}
+}

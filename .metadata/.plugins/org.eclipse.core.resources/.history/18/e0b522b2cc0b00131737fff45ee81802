@@ -1,0 +1,47 @@
+package com.fiona.test;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class ResponseLine{
+	
+	static{
+		response = new ArrayList();
+		response.add("Hello");
+	}
+	
+	public static ArrayList response;
+	
+	public static String responseGet(int index){
+		
+		return response.get(index).toString();
+	}
+	
+	public static boolean responseKeyin(String element){
+		
+		try{
+		
+			response.add(element);
+			return true;
+		
+		}catch(Error e){
+		
+			return false;
+		}
+	}
+
+	public void configResponseLine(BufferedWriter writer,BufferedReader reader) throws IOException{
+		
+		writer.write("Please keyin answers:");
+		writer.flush();
+		
+		String keyin = reader.readLine();
+		
+		if(ResponseLine.responseKeyin(keyin)){
+			System.out.println("Answers were added.");
+		}
+	}
+	
+}

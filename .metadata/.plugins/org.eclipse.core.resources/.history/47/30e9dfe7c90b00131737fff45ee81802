@@ -1,0 +1,31 @@
+package com.fiona.test;
+
+import java.util.ArrayList;
+
+public class ResponseLine{
+	
+	public static ArrayList response;
+	
+	public static String responseGet(int index){
+		
+		return response.get(index).toString();
+	}
+	
+	public static int responseKeyin(String element){
+		
+		try{
+		
+			response.add(element);
+			return 1;
+		
+		}catch(Error e){
+		
+			return 0;
+		}
+	}
+	static{
+		response = new ArrayList();
+		response.add("Hello");
+	}
+	
+}
