@@ -73,6 +73,9 @@ public class ResponseLine{
 			else if(Integer.parseInt(keyin) < ResponseLine.response.size()){
 				System.out.println(ResponseLine.responseGet(Integer.parseInt(keyin)));
 			}
+			
+			
+			
 
 			if(keyin.equals("HELP")){
 				new ResponseLine().helpReponseLine();
