@@ -7,11 +7,11 @@ INDEX VERSION 1.126+/Users/Fiona/Documents/workspace/.metadata/.plugins/org.ecli
 1109983367.index
 2245439947.index
 3712507179.index
-1271342938.index
-2114795239.index
-706459307.index
-3302703152.index
 3321539481.index
+3302703152.index
+706459307.index
+2114795239.index
+1271342938.index
 1197406505.index
 2545238116.index
 1833648217.index
@@ -21,6 +21,5 @@ INDEX VERSION 1.126+/Users/Fiona/Documents/workspace/.metadata/.plugins/org.ecli
 2125659697.index
 2174218996.index
 156905802.index
-606365221.index
 1819685514.index
 4095930659.index
