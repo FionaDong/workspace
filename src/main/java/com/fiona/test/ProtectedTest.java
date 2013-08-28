@@ -1,6 +1,5 @@
 package com.fiona.test;
 
-import com.fiona.A;
 
 public class ProtectedTest {
 

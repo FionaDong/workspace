@@ -1,4 +1,4 @@
-package fiona.fiona;
+package com.fiona.test;
 
 /**
  * Hello world!

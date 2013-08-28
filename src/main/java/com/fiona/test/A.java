@@ -1,4 +1,4 @@
-package com.fiona;
+package com.fiona.test;
 
 public class A {
 
